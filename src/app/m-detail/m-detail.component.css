@@ -1,0 +1,54 @@
+.grid {
+    display: grid;
+    gap: 10px;
+    height: 60%;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(6, 20%);
+    width: 80%;
+    margin: 50px auto;
+}
+
+.content{
+    grid-column: 1 /span 3;
+    grid-row: 1 / span 5;
+    padding: 10px;
+}
+
+.header {
+    display: flex;
+    height: 120px;
+    margin-bottom: 50px;
+}
+
+.header img {
+    width: auto;
+    height: 100%;
+}
+
+.header div {
+    margin-left: 20px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.header div h2 {
+    font-size: 2.5em;
+    margin: 0;
+}
+
+.logout {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sidebar{
+    grid-row: 2 / span 4;
+}
+
+.tile {
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    border-radius: 10px;
+    
+}

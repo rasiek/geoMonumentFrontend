@@ -1,0 +1,25 @@
+<div class="grid">
+    <div class="tile content">
+        <div class="header">
+            <img src="https://picsum.photos/250/250" alt="img">
+            <div>
+                <h2>{{ celeb.prenom | titlecase }} {{ celeb.nom | uppercase }}</h2>
+                <p>{{ celeb.nationalite }}</p>
+            </div>
+
+        </div>
+        <p><span>Description: </span>{{ wiki.extract }}</p>
+        <p><span>Epoque: </span>{{ celeb.epoque }}</p>
+    </div>
+    <div class="tile logout">
+        <a routerLink="/logout">
+            <a routerLink="/logout">
+                <button mat-flat-button color="primary">Logout</button>
+            </a>
+        </a>
+    </div>
+    <div class="tile sidebar">
+
+    </div>
+</div>
+<app-comments></app-comments>

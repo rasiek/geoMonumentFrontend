@@ -1,0 +1,16 @@
+
+.mat-card {
+    width: 40%;
+    margin: 50px auto;
+}
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.login-form button {
+    width: 40%;
+    align-self: center;
+}

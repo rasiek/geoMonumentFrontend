@@ -1,0 +1,42 @@
+<div class="container">
+    <h2>Commentaires</h2>
+
+    <mat-card *ngIf="!comments.length">
+        <mat-card-header>
+            <mat-icon mat-card-avatar>speaker_notes_off</mat-icon>
+            <mat-card-title>Not Comments</mat-card-title>
+            <mat-card-subtitle>Be the first...</mat-card-subtitle>
+        </mat-card-header>
+    </mat-card>
+    <ng-container *ngIf="comments.length">
+        <mat-card *ngFor="let comm of comments">
+            <mat-card-header>
+                <mat-icon mat-card-avatar>person</mat-icon>
+                <mat-card-title>{{ comm.author }}</mat-card-title>
+                <mat-card-subtitle>{{ comm.createdAt | date }}</mat-card-subtitle>
+            </mat-card-header>
+            <mat-card-content>
+                <p>{{ comm.message }}</p>
+            </mat-card-content>
+            <mat-card-actions align="end">
+                <button mat-button>LIKE</button>
+            </mat-card-actions>
+        </mat-card>
+    </ng-container>
+
+    <mat-card>
+        <form [formGroup]="commentForm" (ngSubmit)="onSubmit()">
+            <h2>Ajouter un Commentaire</h2>
+            <mat-error *ngIf="!authenticated">
+                Vous devez vous connecter pour ajouter un commentaire
+            </mat-error>
+            <mat-form-field>
+                <input type="text" matInput placeholder="Commentaire" formControlName="message">
+            </mat-form-field>
+
+            <button mat-raised-button color="primary" [disabled]="(!commentForm.valid || !authenticated)">Ajouter
+                Commentaire</button>
+
+        </form>
+    </mat-card>
+</div>

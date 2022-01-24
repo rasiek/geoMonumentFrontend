@@ -1,0 +1,25 @@
+<div class="grid">
+    <div class="tile content">
+        <div class="header">
+            <img src="https://picsum.photos/250/250" alt="img">
+            <div>
+                <h2>{{ username }}</h2>
+                <p>Created: </p>
+            </div>
+
+        </div>
+        <mat-form-field appearance="fill">
+            <mat-label>Username</mat-label>
+            <input matInput type="text" value="{{ username }}">
+        </mat-form-field>
+
+    </div>
+    <div class="tile logout">
+        <a routerLink="/logout">
+            <button mat-flat-button color="primary">Logout</button>
+        </a>
+    </div>
+    <div class="tile sidebar">
+
+    </div>
+</div>

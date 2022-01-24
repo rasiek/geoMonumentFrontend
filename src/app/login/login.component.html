@@ -1,0 +1,27 @@
+<mat-card>
+    <mat-card-content>
+        <form class="login-form" [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+            <h2>Log in</h2>
+            <mat-error *ngIf="!loginValid">
+                Invalid credentials
+            </mat-error>
+            <mat-form-field>
+                <input matInput placeholder="Username" formControlName="userName" id="userName">
+                <mat-error>
+                    Please provide a valid username
+                </mat-error>
+            </mat-form-field>
+
+            <mat-form-field>
+                <input matInput placeholder="Password" type="password" formControlName="password">
+                <mat-error>
+                    Please provide a valid password
+                </mat-error>
+            </mat-form-field>
+
+            <p>Need an account? <a routerLink="/signup">Create one here</a></p>
+
+            <button mat-raised-button color="primary" [disabled]="!loginForm.valid">Login</button>
+        </form>
+    </mat-card-content>
+</mat-card>

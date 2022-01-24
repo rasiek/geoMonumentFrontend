@@ -1,0 +1,27 @@
+<div class="grid">
+    <div class="tile content">
+        <div class="header">
+            <img src="https://picsum.photos/250/250" alt="img">
+            <div>
+                <h2>{{ monument.nomM | titlecase }}</h2>
+                <p>{{ monument.codeInsee }}</p>
+            </div>
+
+        </div>
+        <p><span>Type: </span>{{ monument.typeM }}</p>
+        <p><span>Proprietaire: </span>{{ monument.proprietaire }}</p>
+        <google-map height="300px" width="100%" [center]="center" [zoom]="zoom">
+            <map-marker [position]="center">
+
+            </map-marker>
+        </google-map>
+    </div>
+    <div class="tile logout">
+        <button mat-flat-button color="primary">Logout</button>
+    </div>
+    <div class="tile sidebar">
+
+    </div>
+</div>
+
+<app-comments></app-comments>

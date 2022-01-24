@@ -1,0 +1,17 @@
+<div class="container">
+
+    <h2>Celebrités</h2>
+
+    <mat-list class="list">
+        <ng-container *ngFor="let celeb of celebs">
+            <a routerLink="/c-detail/{{ celeb.numCelebrite }}">
+                <mat-list-item>
+                    <mat-icon mat-list-icon>person</mat-icon>
+                    <h3 mat-line>{{ celeb.prenom | titlecase }} {{ celeb.nom | uppercase }}</h3>
+                    <span mat-line>{{ celeb.nationalite }}</span>
+                    <mat-icon>visibility</mat-icon>
+                </mat-list-item>
+            </a>
+        </ng-container>
+    </mat-list>
+</div>

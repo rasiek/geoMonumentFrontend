@@ -1,0 +1,17 @@
+<div class="container">
+
+    <h2>Lieux</h2>
+
+    <mat-list class="list">
+        <ng-container *ngFor="let lieu of lieux">
+            <a routerLink="/l-detail/{{ lieu.codeInsee }}">
+                <mat-list-item>
+                    <mat-icon mat-list-icon>apartment</mat-icon>
+                    <h3 mat-line>{{ lieu.dep | titlecase }}</h3>
+                    <span mat-line>{{ lieu.codeInsee }}</span>
+                    <mat-icon>visibility</mat-icon>
+                </mat-list-item>
+            </a>
+        </ng-container>
+    </mat-list>
+</div>

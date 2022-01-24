@@ -1,0 +1,17 @@
+<div class="container">
+
+    <h2>Monuments</h2>
+
+    <mat-list class="list">
+        <ng-container *ngFor="let monument of monuments">
+            <a routerLink="/m-detail/{{ monument.geoHash }}">
+                <mat-list-item>
+                    <mat-icon mat-list-icon>account_balance</mat-icon>
+                    <h3 mat-line>{{ monument.nomM | titlecase }}</h3>
+                    <span mat-line>{{ monument.typeM }}</span>
+                    <mat-icon>visibility</mat-icon>
+                </mat-list-item>
+            </a>
+        </ng-container>
+    </mat-list>
+</div>
